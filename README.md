@@ -1,2 +1,3 @@
 Cloud Computing Laboratory
-GitHub Cloud Laboratory
+Lê Khánh Duy
+239647
