@@ -143,7 +143,7 @@ function App() {
             }}
         >
             <h1>Quản lý sinh viên</h1>
-
+            <p style={{ color: '#888', fontSize: '14px' }}>Phiên bản v2.0</p>
             <form onSubmit={handleSubmit}>
                 <h2>
                     {editingId

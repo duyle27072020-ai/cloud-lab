@@ -42,13 +42,25 @@ mongoose
         console.log("MongoDB Atlas connected");
 
         app.listen(PORT, () => {
-            console.log(`Server running on port ${PORT} - CI/CD version 1.3`);
+            console.log(`Server running on port ${PORT} - CI/CD version 2.0`);
         });
     })
     .catch((error) => {
         console.error("MongoDB connection error:", error.message);
     });
-
+// Câu 44: Health Check
+app.get('/health', (req, res) => {
+    res.status(200).json({
+        status: 'UP',
+        timestamp: new Date(),
+        uptime: process.uptime()
+    });
+});
+// Câu 74: route lỗi giả định (xóa sau khi thực hành)
+//app.get('/api/error-test', (req, res) => {
+//    console.error('LOI GIA DINH: test chan doan log o Cau 74');
+//    res.status(500).json({ message: 'Loi gia dinh' });
+//});
 // Câu 22
 app.get("/api/hello", (req, res) => {
     res.json({
