@@ -42,7 +42,7 @@ mongoose
         console.log("MongoDB Atlas connected");
 
         app.listen(PORT, () => {
-            console.log(`Server đang chạy tại http://localhost:${PORT}`);
+            console.log(`Server running on port ${PORT} - CI/CD version 1.3`);
         });
     })
     .catch((error) => {
